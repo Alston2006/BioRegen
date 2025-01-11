@@ -1,0 +1,244 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Project BioRegen</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-welcome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #2c8c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user-info h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+.user-type {
+    color: #666;
+    font-size: 14px;
+}
+
+.coin-display {
+    background: linear-gradient(135deg, #2c8c3c, #236f30);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.coin-icon {
+    font-size: 20px;
+    color: gold;
+}
+
+.coin-amount {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.dashboard-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.welcome-message {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.welcome-message h2 {
+    color: #2c8c3c;
+    margin-bottom: 15px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: #2c8c3c;
+    margin-bottom: 10px;
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: #2c8c3c;
+    margin-bottom: 15px;
+}
+
+nav.user-nav {
+    background: #236f30;
+    padding: 10px 30px;
+}
+
+.nav-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logout-btn:hover {
+    text-decoration: underline;
+}
+</style>
+
+<div class="dashboard-header">
+    <div class="user-welcome">
+        <div class="user-avatar">J</div>
+        <div class="user-info">
+            
+            <span class="user-type">Individual Account</span>
+        </div>
+    </div>
+    <div class="coin-display">
+        <span class="coin-icon">🪙</span>
+        <span class="coin-amount">50 Coins</span>
+    </div>
+</div>
+
+<nav class="user-nav">
+    <ul class="nav-links">
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/activities">My Activities</a></li>
+        <li><a href="/rewards">Rewards</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <button class="logout-btn">
+            <span>Logout</span>
+            <span>→</span>
+        </button>
+    </ul>
+</nav>
+
+<div class="dashboard-content">
+    <div class="welcome-message">
+        <h2>Welcome to Your BioRegen Dashboard!</h2>
+        <p>Thank you for joining our mission to create a sustainable future. You've been awarded 50 coins to start your journey!</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">🌱</div>
+            <h3>Track Impact</h3>
+            <p>Monitor your contribution to waste reduction and environmental impact.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Set Goals</h3>
+            <p>Create and achieve your sustainability targets.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Earn Rewards</h3>
+            <p>Complete activities to earn more coins and unlock rewards.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Community</h3>
+            <p>Connect with other environmentally conscious individuals.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+// Get user data from localStorage (this would normally come from your backend)
+window.onload = function() {
+    // Simulate getting user data from login
+    const userData = {
+        name: "John Doe",
+        coins: 50,
+        type: "Individual Account"
+    };
+
+    // Update the display with user data
+    document.querySelector('.user-info h1').textContent = userData.name;
+    document.querySelector('.coin-amount').textContent = `${userData.coins} Coins`;
+    document.querySelector('.user-avatar').textContent = userData.name[0];
+
+    // Handle logout
+    document.querySelector('.logout-btn').addEventListener('click', function() {
+        // Add your logout logic here
+        window.location.href = 'login.html';
+    });
+}
+</script>
+</html>

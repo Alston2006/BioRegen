@@ -1,0 +1,318 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Dashboard - Project BioRegen</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.dashboard-header {
+    background: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.business-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-name {
+    font-size: 24px;
+    color: #2c8c3c;
+    font-weight: bold;
+}
+
+.dashboard-nav {
+    background: #236f30;
+    padding: 15px 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.sales-form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-title {
+    color: #2c8c3c;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.price-calculator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #2c8c3c;
+}
+
+.submit-btn {
+    background: #2c8c3c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #236f30;
+}
+
+.orders-list {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.order-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.order-id {
+    font-weight: bold;
+    color: #2c8c3c;
+}
+
+.order-status {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.order-details {
+    font-size: 14px;
+    color: #666;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 24px;
+    color: #2c8c3c;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 14px;
+}
+</style>
+
+<div class="dashboard-header">
+    <div class="business-info">
+        <div class="business-name">Business Name</div>
+    </div>
+</div>
+
+<nav class="dashboard-nav">
+    <ul class="nav-links">
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#inventory">Inventory</a></li>
+        <li><a href="#orders">Orders</a></li>
+        <li><a href="#settings">Settings</a></li>
+    </ul>
+</nav>
+
+<div class="main-content">
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="stat-value">0 kg</div>
+            <div class="stat-label">Total Waste Food Sold</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">₹0</div>
+            <div class="stat-label">Total Revenue</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Active Orders</div>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="sales-form">
+            <h2 class="form-title">List Waste Food for Sale</h2>
+            <form id="wasteForm">
+                <div class="form-group">
+                    <label for="foodType">Food Type</label>
+                    <input type="text" id="foodType" required placeholder="e.g., Restaurant Leftovers, Expired Products">
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity">Quantity (kg)</label>
+                    <input type="number" id="quantity" min="1" required>
+                    <div class="price-calculator">
+                        Total Price: ₹<span id="totalPrice">0</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickup">Pickup Address</label>
+                    <textarea id="pickup" required placeholder="Enter complete address for pickup"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" required placeholder="Describe the type of waste food, condition, etc."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">List for Sale</button>
+            </form>
+        </div>
+
+        <div class="orders-list">
+            <h2 class="form-title">Recent Orders</h2>
+            <div class="order-card">
+                <div class="order-header">
+                    <span class="order-id">#ORD001</span>
+                    <span class="order-status status-pending">Pending Pickup</span>
+                </div>
+                <div class="order-details">
+                    <p>Quantity: 5kg</p>
+                    <p>Total: ₹100</p>
+                    <p>Date: 2025-01-11</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('quantity').addEventListener('input', function(e) {
+    const quantity = parseFloat(e.target.value) || 0;
+    const pricePerKg = 20;
+    const totalPrice = quantity * pricePerKg;
+    document.getElementById('totalPrice').textContent = totalPrice;
+});
+
+document.getElementById('wasteForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = {
+        foodType: document.getElementById('foodType').value,
+        quantity: document.getElementById('quantity').value,
+        pickup: document.getElementById('pickup').value,
+        description: document.getElementById('description').value,
+        totalPrice: document.getElementById('totalPrice').textContent
+    };
+    
+    // Here you would typically send this data to your backend
+    alert('Food waste listed successfully!');
+    this.reset();
+    document.getElementById('totalPrice').textContent = '0';
+});
+
+// Load business name on page load
+window.onload = function() {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    if (userData) {
+        document.querySelector('.business-name').textContent = userData.name;
+    }
+};
+</script>
+</html>

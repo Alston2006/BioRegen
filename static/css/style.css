@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color:#276221;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header .hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header .hero p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+main{
+    
+    background-color:#46923c  ;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 0.5rem 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav li {
+    margin: 0 1rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.section {
+    margin: 2rem 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #276221;
+    margin: 1rem 0;
+}
+
+.what-we-do {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.what-we-do div {
+    flex: 1 1 30%;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: aliceblue;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.what-we-do h3 {
+    color: #276221;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color:#276221;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color:#276221;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    margin-bottom: 0.5rem;
+}
+
+.connect {
+  background-image: url(img/connett.jpeg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.collect {
+    background-image: url(img/collectt.jpeg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.convert {
+    background-image: url(img/convertt.jpeg);
+    background-size:100% ;
+    background-position: center;
+    background-repeat: no-repeat;
+}

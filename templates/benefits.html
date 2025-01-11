@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Previous head and styles remain unchanged -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioRegion | Connect Collect Convert</title>
+    <style>
+        /* Previous styles remain unchanged */
+        
+        /* Additional styles for benefits section */
+        .benefits-container {
+            padding: 4rem 0;
+            background-color: var(--light-gray);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            transition: transform var(--transition-speed);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .benefit-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .benefit-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 0;
+        }
+
+        .benefit-description {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Previous header and hero sections remain unchanged -->
+
+    <section class="benefits-container" id="benefits">
+        <h2 class="section-title">Why Choose BioRegion?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-header">
+                    <div class="benefit-icon">♻️</div>
+                    <h3 class="benefit-title">Environmental Impact</h3>
+                </div>
+                <p class="benefit-description">
+                    Reduce your carbon footprint by up to 70% through our efficient food waste management system. Our process prevents methane emissions and converts waste into renewable energy.
+                </p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-header">
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title">Cost Efficiency</h3>
+                </div>
+                <p class="benefit-description">
+                    Save up to 30% on waste management costs while generating additional revenue streams through our conversion process. Benefit from tax incentives and environmental credits.
+                </p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-header">
+                    <div class="benefit-icon">🤝</div>
+                    <h3 class="benefit-title">Seamless Integration</h3>
+                </div>
+                <p class="benefit-description">
+                    Our smart collection system integrates effortlessly with your existing operations. Get real-time tracking, automated scheduling, and detailed analytics without disrupting your workflow.
+                </p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-header">
+                    <div class="benefit-icon">📊</div>
+                    <h3 class="benefit-title">Compliance & Reporting</h3>
+                </div>
+                <p class="benefit-description">
+                    Stay compliant with environmental regulations through our comprehensive tracking and reporting system. Generate detailed sustainability reports for stakeholders and regulatory bodies.
+                </p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-header">
+                    <div class="benefit-icon">🌱</div>
+                    <h3 class="benefit-title">Sustainable Solutions</h3>
+                </div>
+                <p class="benefit-description">
+                    Join the circular economy by converting waste into valuable resources like biogas and organic fertilizers. Support local agriculture and contribute to community sustainability goals.
+                </p>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-header">
+                    <div class="benefit-icon">🏆</div>
+                    <h3 class="benefit-title">Brand Enhancement</h3>
+                </div>
+                <p class="benefit-description">
+                    Strengthen your brand's environmental credentials and meet ESG goals. Showcase your commitment to sustainability with our detailed impact reports and certifications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous footer section remains unchanged -->
+</body>
+</html>
