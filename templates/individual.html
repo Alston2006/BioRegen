@@ -220,7 +220,6 @@ nav.user-nav {
 </div>
 
 <script>
-// Get user data from localStorage (this would normally come from your backend)
 window.onload = function() {
     // Simulate getting user data from login
     const userData = {
@@ -229,12 +228,10 @@ window.onload = function() {
         type: "Individual Account"
     };
 
-    // Update the display with user data
     document.querySelector('.user-info h1').textContent = userData.name;
     document.querySelector('.coin-amount').textContent = `${userData.coins} Coins`;
     document.querySelector('.user-avatar').textContent = userData.name[0];
 
-    // Handle logout
     document.querySelector('.logout-btn').addEventListener('click', function() {
         // Add your logout logic here
         window.location.href = 'login.html';
