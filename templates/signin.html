@@ -199,51 +199,45 @@ body {
 document.getElementById('signupForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Reset error messages
     document.querySelectorAll('.error-message').forEach(error => {
         error.style.display = 'none';
     });
 
     let hasError = false;
 
-    // Validate first name
     if (!this.firstName.value.trim()) {
         document.getElementById('firstNameError').style.display = 'block';
         hasError = true;
     }
 
-    // Validate last name
     if (!this.lastName.value.trim()) {
         document.getElementById('lastNameError').style.display = 'block';
         hasError = true;
     }
 
-    // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.email.value)) {
         document.getElementById('emailError').style.display = 'block';
         hasError = true;
     }
 
-    // Validate password
+
     if (this.password.value.length < 8) {
         document.getElementById('passwordError').style.display = 'block';
         hasError = true;
     }
 
-    // Validate password confirmation
+  
     if (this.password.value !== this.confirmPassword.value) {
         document.getElementById('confirmPasswordError').style.display = 'block';
         hasError = true;
     }
 
-    // Validate user type
     if (!this.userType.value) {
         document.getElementById('userTypeError').style.display = 'block';
         hasError = true;
     }
 
-    // Validate terms
     if (!this.terms.checked) {
         document.getElementById('termsError').style.display = 'block';
         hasError = true;
