@@ -45,6 +45,9 @@ def rewardss():
 @app.route("/inddashboard.html")
 def rew():
     return render_template('inddashboard.html')                                                              
-
+@app.route("/LL.html")
+def rewww():
+    return render_template('/LL.html')
+    
 if __name__=="__main__":
     app.run(debug=True)          
