@@ -1,10 +1,5 @@
 from flask import Flask,render_template,request,redirect,url_for
 
-'''
- It creates an instance of the Flask class, 
- which will be your WSGI (Web Server Gateway Interface) application.
-'''
-###WSGI Application
 app=Flask(__name__)
 
 @app.route("/")
@@ -35,11 +30,6 @@ def submit():
         password=request.form['password']
         return f'Hello {email}!'
     return render_template('LL.html')
-
- #<input type="text" id="name" name="name">
- #<input type="submit" value="Submit">
-
-
 
 
 @app.route("/signin.html")
