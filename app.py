@@ -47,4 +47,4 @@ def rew():
     return render_template('inddashboard.html')                                                              
 
 if __name__=="__main__":
-    app.run(debug=True)              #/inddashboard.html
+    app.run(debug=True)          
